@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevChat OS</title>
+    <link rel="icon" type="image/png" href="iconesite.png" />
+    <link rel="stylesheet" href="post.css" />
+  </head>
+  <body>
+    <!-- ÉCRAN DE CONNEXION  -->
+    <div id="auth-layer">
+      <div class="login-card" id="card">
+        <h1>Dev Chat V3</h1>
+        <p>Accès au Groupe Admin</p>
+
+        <div style="text-align: left">
+          <input type="text" id="userIn" placeholder="Nom Admin" />
+          <input type="password" id="passIn" placeholder="code secret" />
+        </div>
+
+        <button
+          id="btnAuth"
+          class="btnRun"
+          style="width: 100%; margin-top: 15px; height: 50px"
+        >
+          SE CONNECTER
+        </button>
+      </div>
+    </div>
+
+    <!-- STRUCTURE DU SITE SÉPARÉE  -->
+    <div id="main-site">
+      <aside class="sidebar" id="sidbar">
+        <div class="side-header">💻 Dev Junior</div>
+        <div class="admin-list">
+          <div class="admin-item">
+            <div class="avatar letter-r" style="color: aqua" id="section-r">
+              R
+            </div>
+            <span>RUPHIN</span>
+          </div>
+          <div class="admin-item">
+            <div
+              class="avatar letter-g"
+              style="color: rgb(218, 90, 90)"
+              id="section-g"
+            >
+              G
+            </div>
+            <span>GLOIRE</span>
+          </div>
+          <div class="admin-item">
+            <div class="avatar letter-j" style="color: blue">J</div>
+            <span>JAPHET</span>
+          </div>
+          <div class="admin-item">
+            <div class="avatar letter-b" style="color: green">J</div>
+            <span>JULES</span>
+          </div>
+        </div>
+        <div class="admin-item">
+          <div class="avatar letter-e" style="color: orange">E</div>
+          <span>ELIEL</span>
+        </div>
+      </aside>
+
+      <main class="chat-area">
+        <header class="chat-header">
+          <button id="toggleSidebar" class="menu-btn">☰</button>
+
+          <strong id="display-name" style="font-size: 18px">Admin</strong>
+          <div class="session-status">Session sécurisée active</div>
+        </header>
+
+        <div class="messages-box" id="msgBox">
+          <div class="msg received">
+            <span class="msg-info sys-info"></span>
+            Bienvenue chers membres du groupe notre mission est de faire de nous
+            les meilleurs. Tous les échanges sont cryptés par ma machine
+            virtuelle donc faites attention pour ce que vous dite.
+          </div>
+        </div>
+
+        <footer class="chat-input-area">
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Écrire un message..."
+            required
+          />
+          <button class="btn-send" id="sendBtn">➤</button>
+        </footer>
+      </main>
+    </div>
+
+    <script type="module" src="test.js?v=99"></script>
+  </body>
+</html>

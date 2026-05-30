@@ -1,0 +1,423 @@
+/* --- VARIABLES FUTURISTES --- */
+:root {
+  --win-accent: #00a884; /* Vert Fluent */
+  --win-bg: #020617; /* Fond ultra sombre Windows 12 */
+  --win-glass: rgba(22, 28, 36, 0.7); /* Verre fumé */
+  --win-border: rgba(255, 255, 255, 0.08); /* Bordure fine comme un cheveu */
+  --win-text: #f8fafc;
+  --win-muted: #94a3b8;
+  --msg-sent: #005c4b;
+  --msg-received: rgba(30, 41, 59, 0.8);
+  --danger: #ff4d4d;
+}
+
+/* --- STRUCTURE GLOBALE --- */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
+  background: radial-gradient(
+    circle at top left,
+    #0f172a,
+    #020617
+  ); /* Dégradé de profondeur */
+  color: var(--win-text);
+  overflow: hidden;
+}
+
+/* On ajoute un padding pour que l'app semble flotter dans l'écran */
+body {
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+/* --- ÉCRAN DE CONNEXION (Style Windows Hello) --- */
+#auth-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  background: rgba(2, 6, 23, 0.9);
+  backdrop-filter: blur(20px);
+  transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.login-card {
+  background: var(--win-glass);
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid var(--win-border);
+  width: 340px;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+.login-card h1 {
+  font-weight: 600;
+  letter-spacing: -1px;
+  background: linear-gradient(to right, #00a884, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- CONTENEUR PRINCIPAL (SÉPARÉ) --- */
+/* --- CONTENEUR PRINCIPAL --- */
+#main-site {
+  display: flex !important;
+  flex-direction: row;
+  width: 100%;
+  height: calc(100vh - 24px); /* Calcule la hauteur exacte avec le padding */
+  opacity: 1 !important; /* ON GARDE UNIQUEMENT CELUI-LA */
+  gap: 12px;
+  box-sizing: border-box;
+  transition: 1s ease;
+}
+
+/* --- BARRE LATÉRALE SUBLIME --- */
+.sidebar {
+  width: 200px;
+  background: var(--win-glass);
+  backdrop-filter: blur(30px); /* Effet Mica */
+  border-radius: 16px;
+  border: 1px solid var(--win-border);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px var(--win-accent);
+}
+
+.side-header {
+  padding: 25px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--win-accent);
+  text-transform: uppercase;
+}
+
+/* --- AVATARS EN EXPERT --- */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px; /* Carré arrondi moderne au lieu de cercle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.admin-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  margin: 4px 12px;
+  border-radius: 12px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.admin-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* --- ZONE DE CHAT ÉPURÉE --- */
+.chat-area {
+  flex: 1;
+  background: var(--win-glass);
+  backdrop-filter: blur(30px);
+  border-radius: 16px;
+  border: 1px solid var(--win-border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  display: flex; /* Active le mode Flexbox */
+}
+
+.chat-header {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 20px 30px;
+  border-bottom: 1px solid var(--win-border);
+}
+
+.messages-box {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* --- BULLES DE MESSAGES SQUIRLE --- */
+.msg {
+  max-width: 65%;
+  padding: 12px 18px;
+  border-radius: 18px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  position: relative;
+}
+
+.sent {
+  align-self: flex-end;
+  background: var(--msg-sent);
+  border-bottom-right-radius: 4px; /* Effet bulle moderne */
+}
+
+.received {
+  align-self: flex-start;
+  background: var(--msg-received);
+  border: 1px solid var(--win-border);
+  border-bottom-left-radius: 4px;
+}
+
+/* --- BARRE DE SAISIE FLOTTANTE --- */
+.chat-input-area {
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  gap: 15px;
+  border-top: 1px solid var(--win-border);
+  align-items: center;
+}
+/* 1. Reset des inputs globaux pour la carte de login */
+.login-card input {
+  width: 100%;
+  margin-top: 15px;
+  display: block;
+}
+
+/* 2. Style spécifique pour l'input de CHAT */
+.chat-input-area input {
+  flex: 1; /* L'input prend tout l'espace disponible */
+  margin-top: 0; /* ON ENLÈVE la marge qui casse l'alignement vertical */
+  width: auto; /* On laisse le flex-grow gérer la largeur */
+}
+
+/* 3. Alignement vertical du bouton */
+.btn-send,
+.btnRun {
+  flex-shrink: 0; /* Empêche le bouton de rétrécir */
+  display: flex;
+  align-items: center;
+  justify-content: center; /*ici je centre le boutton pour un style windows 12*/
+}
+
+input {
+  width: 100%;
+  padding: 14px; /* Un peu plus grand pour le confort */
+  margin-top: 15px; /* CRUCIAL : Crée l'espace au-dessus de chaque champ */
+  border-radius: 10px;
+  border: 1px solid var(--win-border);
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  outline: none;
+  box-sizing: border-box; /* Évite que l'input ne dépasse de la carte */
+}
+
+input:focus {
+  border-color: var(--win-accent);
+  box-shadow: 0 0 10px rgba(0, 168, 132, 0.2);
+}
+
+.btn-send {
+  background: var(--win-accent);
+  border: none;
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-send:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+.btnRun {
+  background: var(--win-accent);
+  border: none;
+  width: 32px;
+  height: 32px;
+
+  border-radius: 12px;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* Conteneur global du message pour gérer l'empilement vertical */
+.msg-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 65%;
+  gap: 4px;
+  animation: Touchederuphin;
+}
+
+/* Style du nom d'utilisateur discret */
+.msg-author {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--win-muted); /* Utilise votre variable grise */
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+  margin-left: 4px;
+}
+
+/* Alignement spécifique pour vos messages envoyés */
+.sent-wrapper {
+  align-self: flex-end;
+  align-items: flex-end; /* Aligne le nom ET la bulle à droite du wrapper */
+}
+.sent-wrapper .msg-author {
+  text-align: left;
+  margin-right: 4px;
+}
+
+/* Ajustement de la bulle pour qu'elle ne prenne que la largeur de son texte */
+.msg {
+  max-width: 100%; /* Le wrapper gère déjà la largeur max */
+  width: fit-content;
+}
+@keyframes Touchederuphin {
+  0% {
+    opacity: 0; /* Invisible */
+    transform: translateY(20px); /* 20px plus bas */
+  }
+  100% {
+    opacity: 1; /* Totalement visible */
+    transform: translateY(0); /* À sa place normale */
+  }
+}
+/* La flèche pour les messages (à droite) */
+.msg.sent::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -8px; /* On la pousse un peu vers l'extérieur */
+  width: 0;
+  height: 0;
+  border-left: 12px solid var(--msg-sent); /* La pointe est de la même couleur que la bulle */
+  border-top: 12px solid transparent;
+}
+
+/* La flèche pour les messages reçus (à gauche) */
+.msg.received::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-right: 12px solid var(--msg-received);
+  border-top: 12px solid transparent;
+}
+
+/* IMPORTANT : Ajoute ceci à ta classe .msg pour que les flèches se placent bien */
+.msg {
+  position: relative; /* Indispensable pour positionner le ::after */
+}
+.sid-btn:hover {
+  background-color: transparent;
+  transform: transleY(-12px);
+  width: 70px;
+  height: 70px;
+}
+/* --- RESPONSIVE POUR PETITS ÉCRANS --- */
+.menu-btn {
+  display: none; /* caché sur PC */
+  background: var(--win-accent);
+  color: white;
+  border: none;
+  font-size: 22px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .menu-btn {
+    display: block; /* visible sur téléphone */
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -250px; /* cachée par défaut */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    left: 0; /* apparaît quand on l' active */
+  }
+
+  .chat-area {
+    margin-left: 0; /* occupe tout l’écran */
+  }
+}
+/* --- RESPONSIVE LOGIN CARD --- */
+@media screen and (max-width: 768px) {
+  .login-card {
+    width: 90%; /* occupe presque toute la largeur */
+    padding: 20px; /* réduit le padding pour éviter que ça déborde */
+    font-size: 16px; /* texte plus lisible */
+  }
+
+  .login-card h1 {
+    font-size: 22px; /* titre plus compact */
+  }
+
+  .login-card p {
+    font-size: 14px;
+  }
+
+  #userIn,
+  #passIn {
+    width: 100%; /* champs prennent toute la largeur */
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  #btnAuth {
+    width: 100%; /* bouton large et confortable */
+    height: 45px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+}
+
+/* --- ULTRA PETITS ÉCRANS (smartphones < 480px) --- */
+@media screen and (max-width: 480px) {
+  .login-card {
+    width: 95%;
+    padding: 15px;
+    border-radius: 16px; /* coins plus arrondis pour un look mobile */
+  }
+
+  .login-card h1 {
+    font-size: 20px;
+  }
+
+  #btnAuth {
+    font-size: 14px;
+    height: 40px;
+  }
+}
