@@ -33,7 +33,7 @@ body {
   box-sizing: border-box;
 }
 
-/* --- ÉCRAN DE CONNEXION (Style Windows Hello) --- */
+/* --- ÉCRAN DE CONNEXION (Style Windows 11 & 12) --- */
 #auth-layer {
   position: fixed;
   top: 0;
@@ -80,7 +80,7 @@ body {
   transition: 1s ease;
 }
 
-/* --- BARRE LATÉRALE SUBLIME --- */
+/* --- BARRE LATÉRALE MINIMALISTE --- */
 .sidebar {
   width: 200px;
   background: var(--win-glass);
@@ -164,7 +164,7 @@ body {
   max-width: 65%;
   padding: 12px 18px;
   border-radius: 18px;
-  font-size: 14.5px;
+  font-size: 14px;
   line-height: 1.5;
   position: relative;
 }
@@ -328,7 +328,7 @@ input:focus {
   border-top: 12px solid transparent;
 }
 
-/* IMPORTANT : Ajoute ceci à ta classe .msg pour que les flèches se placent bien */
+
 .msg {
   position: relative; /* Indispensable pour positionner le ::after */
 }
@@ -409,7 +409,7 @@ input:focus {
   .login-card {
     width: 95%;
     padding: 15px;
-    border-radius: 16px; /* coins plus arrondis pour un look mobile */
+    border-radius: 18px; /* coins plus arrondis pour un look mobile */
   }
 
   .login-card h1 {
