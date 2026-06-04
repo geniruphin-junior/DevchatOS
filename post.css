@@ -91,14 +91,56 @@ body {
   flex-direction: column;
   box-shadow: 0 4px 20px var(--win-accent);
 }
-
 .side-header {
-  padding: 25px 20px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: var(--win-accent);
-  text-transform: uppercase;
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center; /* centre verticalement */
+  padding: 20px; /* espace intérieur autour du logo */
+  background-color: rgba(255, 255, 255, 0.05); /* effet verre dépoli léger */
+  backdrop-filter: blur(10px); /* flou derrière le logo */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* ligne de séparation subtile */
+}
+.popup-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #00ffcc; /* cyan néon  que j'ai tenté en faisant du code de couleur*/
+  cursor: pointer;
+  animation: heartbeat 1.2s infinite; /* cœur battant */
+  transition: transform 0.3s ease;
+}
+.popup-btn:hover {
+  transform: scale(1.2); /* zoom au survol */
+  color: #ff0066; /* devient rose/rouge */
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logo {
+  width: 80px; /* taille du logo */
+  height: auto; /* garde les proportions */
+  border-radius: 12px; /* coins arrondis */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4); /* effet glow futuriste */
+  transition: transform 0.3s ease; /* animation fluide */
+}
+
+.logo:hover {
+  transform: scale(1.1); /* effet zoom au survol */
 }
 
 /* --- AVATARS EN EXPERT --- */
@@ -327,7 +369,6 @@ input:focus {
   border-right: 12px solid var(--msg-received);
   border-top: 12px solid transparent;
 }
-
 
 .msg {
   position: relative; /* Indispensable pour positionner le ::after */

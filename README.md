@@ -34,5 +34,5 @@ Malgré les difficultés de notre pays, nous avons créé ce projet pour apprend
 
 1. Clonez le dépôt :
    ```bash
-   git clone https://github.com/tonpseudo/devchat.git
+   git clone https://github.com/geniruphin-junior/devchat.git
    ```
