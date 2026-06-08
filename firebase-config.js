@@ -18,33 +18,26 @@ import {
 
 // --- 2. CONFIGURATION DU PROJET AVECX IMPORT DES MODULES FIREBASE DE FRANKFORT
 const firebaseConfig = {
-  apiKey: "AIzaSyCYz4g734STV0GdnvKdcsPGLaZc_J_XXg",
-  authDomain: "devchat-ruphin.firebaseapp.com",
-  databaseURL: "https://devchat-ruphin-default-rtdb.firebaseio.com",
+  apiKey: "TA_API_ICI",
+  authDomain: "TON_COMPTE_FIREBASE",
+  databaseURL: "ADRESSE_DE_TA_BASE_DONNE",
   projectId: "devchat-ruphin",
-  storageBucket: "devchat-ruphin.firebasestorage.app",
-  messagingSenderId: "750392215277",
-  appId: "1:750392215277:web:630bd10e89323ed3962ee4",
+  storageBucket: "XXXXXXXXXXXXX.firebasestorage.app",
+  messagingSenderId: "XXXXXXXXXXXXX",
+  appId: "XXXXXXXXXXXXXXXXXXXXXXXX",
 };
 
-// Innitialisation et recuperation des données du serveur firebase de frankfurt
+// Innitialisation et recuperation des données du serveur firebase 
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 // --- 3. CONFIGURATION DU SYSTÈME ---
 const ADMINS = [
-  "RUPHIN",
-  "GLOIRE",
-  "JAPHET",
-  "JULES",
-  "NOBLE",
-  "ELIEL",
-  "HACKER",
-  "OTHERS",
-  "HACKER",
+  "xxxxxx",
+  
 ];
-const CODE = "hackermode**string";
+const CODE = "XXXXXXXXXXXXXXXXXXXX";
 let activeUser = "";
 
 // --- 4. ÉLÉMENTS DU DOM ---
