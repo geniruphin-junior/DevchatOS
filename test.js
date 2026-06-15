@@ -44,7 +44,7 @@ const ADMINS = [
   "OTHERS",
   "HACKER",
 ];
-const CODE = "hackermode**string";
+const CODE = "JVLTIC2026";
 let activeUser = "";
 
 // --- 4. ÉLÉMENTS DU DOM ---
