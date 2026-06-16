@@ -14,7 +14,7 @@ Malgré les difficultés de notre pays, nous avons créé ce projet pour apprend
 
 ## 🖼️ Aperçu du projet
 
-![Interface de DevChat OS](devchat.png)
+![Interface de DevChat OS](dev.png)
 
 > Interface sécurisée et futuriste de DevChat OS 💬
 > Devchat fonctionnnant avec la technologie _firebase de google_ connecté au serveur de frankfurt
