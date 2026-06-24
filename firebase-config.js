@@ -140,7 +140,7 @@ document.addEventListener("keypress", (e) => {
     else tryLogin();
   }
 });
-//adaptation aux petits ecrans
+//adaptation aux petits écrans
 const toggleBtn = document.getElementById("toggleSidebar");
 const sidebar = document.getElementById("sidbar");
 
