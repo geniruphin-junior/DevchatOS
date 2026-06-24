@@ -53,6 +53,7 @@ function tryLogin() {
   const card = document.getElementById("card");
 
   if (ADMINS.includes(u) && p === CODE) {
+    //logique derière  la connection
     activeUser = u;
     unlockSystem();
     loadMessages();
