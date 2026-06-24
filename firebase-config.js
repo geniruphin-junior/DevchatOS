@@ -48,7 +48,7 @@ const mainSite = document.getElementById("main-site");
 
 // --- 5.moteur de connnection  ---
 function tryLogin() {
-  const u = document.getElementById("userIn").value.trim().toUpperCase();
+  const u = document.getElementById("userIn").value.trim().toUpperCase(); // on coupe les espaces , et on transforme en majuscule
   const p = document.getElementById("passIn").value;
   const card = document.getElementById("card");
 
