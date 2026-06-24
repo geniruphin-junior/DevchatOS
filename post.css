@@ -452,7 +452,7 @@ input:focus {
   }
 }
 
-/* --- ULTRA PETITS ÉCRANS (smartphones < 480px) --- */
+/* --- ULTRA PETITS ÉCRANS (smartphones < 480px), utiles pour mes potes et collaborrateurs --- */
 @media screen and (max-width: 480px) {
   .login-card {
     width: 95%;
