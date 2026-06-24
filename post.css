@@ -3,7 +3,12 @@
   --win-accent: #00a884; /* Vert Fluent */
   --win-bg: #020617; /* Fond ultra sombre Windows 12 */
   --win-glass: rgba(22, 28, 36, 0.7); /* Verre fumé */
-  --win-border: rgba(255, 255, 255, 0.08); /* Bordure fine comme un cheveu */
+  --win-border: rgba(
+    255,
+    255,
+    255,
+    0.08
+  ); /* Bordure fine comme un cheveu pour faire plus pro */
   --win-text: #f8fafc;
   --win-muted: #94a3b8;
   --msg-sent: #005c4b;
