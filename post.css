@@ -54,7 +54,7 @@ body {
   backdrop-filter: blur(20px);
   transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/*carte de connection bien épuré*/
 .login-card {
   background: var(--win-glass);
   padding: 40px;
@@ -163,6 +163,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/*icônes des utilisateurs*/
 .admin-item {
   display: flex;
   align-items: center;
@@ -352,7 +353,7 @@ input:focus {
     transform: translateY(0); /* À sa place normale */
   }
 }
-/* La flèche pour les messages (à droite) */
+/* La flèche pour les messages (à droite) ca donne un style app react*/
 .msg.sent::after {
   content: "";
   position: absolute;
