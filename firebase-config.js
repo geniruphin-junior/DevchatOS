@@ -69,6 +69,7 @@ function tryLogin() {
   }
 }
 
+// lancement du systeme de messagerie
 function unlockSystem() {
   authLayer.style.opacity = "0";
   authLayer.style.filter = "blur(20px)";
@@ -100,6 +101,7 @@ async function sendMsg() {
   }
 }
 
+// demarrage des message
 function loadMessages() {
   const q = query(collection(db, "messages"), orderBy("timestamp", "asc"));
   onSnapshot(q, (snapshot) => {
