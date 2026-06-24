@@ -145,5 +145,5 @@ const toggleBtn = document.getElementById("toggleSidebar");
 const sidebar = document.getElementById("sidbar");
 
 toggleBtn.addEventListener("click", () => {
-  sidebar.classList.toggle("active");
+  sidebar.classList.toggle("active"); // apparition de la siddebar
 });
