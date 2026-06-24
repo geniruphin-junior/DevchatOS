@@ -1,10 +1,5 @@
-/* 
-   ================================================================
-   SYSTÈME DE MESSAGERIE DÉVELOPPÉ PAR RUPHIN & L'ÉQUIPE DEV JVLTIC 
-   ================================================================*/
+// 1.import des essentiels qui vous sont donnés depuis votre compte fire base
 
-// --- 1. IMPORTATIONS (LIENS VERS LES FICHIERS RÉELS) GRACE A UN PEU D AIDE DE COPILOT ---
-// --- 1. IMPORTATIONS CORRECTES ---
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import {
   getFirestore,
@@ -16,7 +11,7 @@ import {
   serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-// --- 2. CONFIGURATION DU PROJET AVECX IMPORT DES MODULES FIREBASE DE FRANKFORT
+// 2. configuration avec les clés donnés sur votre compte firebase
 const firebaseConfig = {
   apiKey: "TA_API_ICI",
   authDomain: "TON_COMPTE_FIREBASE",
@@ -27,20 +22,23 @@ const firebaseConfig = {
   appId: "XXXXXXXXXXXXXXXXXXXXXXXX",
 };
 
-// Innitialisation et recuperation des données du serveur firebase 
+// Innitialisation et recuperation des données du serveur firebase
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// --- 3. CONFIGURATION DU SYSTÈME ---
+// --- 3. configuration du systeme ---
 const ADMINS = [
+  /* ici pour vous j ai fait un petit moteur de connection avec un code et des noms,
+   mais pour faire une vraie app il faut utiliser firebase autentification*/
   "xxxxxx",
-  
+  "xxxxxxx",
+  "xxxxxxxxx",
 ];
 const CODE = "XXXXXXXXXXXXXXXXXXXX";
 let activeUser = "";
 
-// --- 4. ÉLÉMENTS DU DOM ---
+// --- 4. élements du dom ---
 const btnAuth = document.getElementById("btnAuth");
 const sendBtn = document.getElementById("sendBtn");
 const chatInput = document.getElementById("chatInput");
@@ -48,7 +46,7 @@ const msgBox = document.getElementById("msgBox");
 const authLayer = document.getElementById("auth-layer");
 const mainSite = document.getElementById("main-site");
 
-// --- 5. LOGIQUE DE CONNEXION ---
+// --- 5.moteur de connnection  ---
 function tryLogin() {
   const u = document.getElementById("userIn").value.trim().toUpperCase();
   const p = document.getElementById("passIn").value;
