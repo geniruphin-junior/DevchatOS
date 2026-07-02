@@ -105,6 +105,19 @@ body {
   backdrop-filter: blur(10px); /* flou derrière le logo */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* ligne de séparation subtile */
 }
+/*button ressources pour ppartage des liens*/
+.resource-btn {
+  background-color: #147bdb;
+  border-radius: 8px;
+  padding: 8px;
+  border: none;
+  animation: heartbeat;
+  transition: 1s ease;
+}
+.resource-btn:hover {
+  transform: scale(1.2);
+}
+
 .popup-btn {
   background: transparent;
   border: none;
@@ -119,6 +132,7 @@ body {
   color: #ff0066; /* devient rose/rouge */
 }
 @keyframes heartbeat {
+  /* coeur qui bat cool pour l'effet cyberpunk */
   0% {
     transform: scale(1);
   }
@@ -470,7 +484,4 @@ input:focus {
     font-size: 14px;
     height: 40px;
   }
-}
-.resource-btn {
-  display: none;
 }
