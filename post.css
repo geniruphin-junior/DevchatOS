@@ -73,7 +73,6 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* --- CONTENEUR PRINCIPAL (SÉPARÉ) --- */
 /* --- CONTENEUR PRINCIPAL --- */
 #main-site {
   display: flex !important;
@@ -193,10 +192,13 @@ body {
   display: flex; /* Active le mode Flexbox */
 }
 
+/* ---header du chat-area ---*/
 .chat-header {
   background: rgba(255, 255, 255, 0.02);
   padding: 20px 30px;
   border-bottom: 1px solid var(--win-border);
+  display: flex;
+  justify-content: space-between;
 }
 
 .messages-box {
