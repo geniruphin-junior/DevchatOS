@@ -216,6 +216,10 @@ body {
   flex-direction: row-reverse;
   font-family: "Audiowide", cursive;
 }
+#display-name {
+  letter-spacing: 2px;
+  color: #0b4e8d;
+}
 
 .messages-box {
   flex: 1;
