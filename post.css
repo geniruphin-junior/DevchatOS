@@ -120,6 +120,7 @@ body {
 
 .popup-btn {
   background: transparent;
+
   border: none;
   font-size: 20px;
   color: #00ffcc; /* cyan néon  que j'ai tenté en faisant du code de couleur*/
@@ -130,6 +131,9 @@ body {
 .popup-btn:hover {
   transform: scale(1.2); /* zoom au survol */
   color: #ff0066; /* devient rose/rouge */
+}
+#popup {
+  display: none;
 }
 @keyframes heartbeat {
   /* coeur qui bat cool pour l'effet cyberpunk */
