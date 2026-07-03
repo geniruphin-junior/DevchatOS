@@ -132,8 +132,8 @@ body {
   transform: scale(1.2); /* zoom au survol */
   color: #ff0066; /* devient rose/rouge */
 }
-#popup {
-  display: none;
+.popup {
+  display: block;
 }
 @keyframes heartbeat {
   /* coeur qui bat cool pour l'effet cyberpunk */
@@ -223,6 +223,7 @@ body {
 #display-name {
   letter-spacing: 2px;
   color: #0b4e8d;
+  font-size: 18px;
 }
 
 .messages-box {
