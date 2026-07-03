@@ -214,6 +214,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
+  font-family: "Audiowide", cursive;
 }
 
 .messages-box {
