@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevChat OS</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="icon" type="image/png" href="iconesite.png" />
     <link rel="stylesheet" href="post.css" />
   </head>
@@ -80,6 +82,21 @@
           <strong id="display-name" style="font-size: 18px">Admin</strong>
           
         </header>
+        <!--creation du popup-->
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <span id="closePopup" class="material-icons">close</span>
+            <h3>Mes Ressources</h3>
+            <div class="icons">
+              <a href="https://github.com" target="_blank"><span class="material-icons">code</span> GitHub</a>
+              <a href="https://youtube.com" target="_blank"><span class="material-icons">ondemand_video</span> YouTube</a>
+              <a href="https://gitlab.com" target="_blank"><span class="material-icons">storage</span> GitLab</a>
+              <a href="https://gemini.google.com" target="_blank"><span class="material-icons">auto_awesome</span> Gemini</a>
+              <a href="https://code.visualstudio.com" target="_blank"><span class="material-icons">computer</span> VS Code</a>
+            </div>
+          </div>
+        </div>
+
 
         <div class="messages-box" id="msgBox">
           <div class="msg received">
