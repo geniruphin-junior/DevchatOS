@@ -108,7 +108,7 @@ function loadMessages() {
     msgBox.innerHTML = "";
     snapshot.forEach((doc) => {
       const data = doc.data();
-      displayMessage(data.author, data.text, data.author === activeUser);
+      displayMessage(data.author, data.text, data.author === activeUser, data.timestamp);
     });
   });
 }
@@ -117,8 +117,8 @@ function displayMessage(author, text, isSent, timestamp) {
   const wrapper = document.createElement("div");
   let timeTrue = "";
   if (timestamp) {
-    const date = data.timestamp.toDate();
-    timeTrue = date.toLocaleString("fr", "FR");
+    const date = timestamp.toDate();
+    timeTrue = date.toLocaleString("fr-FR");
   }
 
   wrapper.className = `msg-wrapper ${isSent ? "sent-wrapper" : ""}`;
@@ -142,7 +142,7 @@ document.addEventListener("keypress", (e) => {
 });
 //adaptation aux petits écrans
 const toggleBtn = document.getElementById("toggleSidebar");
-const sidebar = document.getElementById("sidbar");
+const sidebar = document.getElementById("sidebar");
 
 toggleBtn.addEventListener("click", () => {
   sidebar.classList.toggle("active"); // apparition de la siddebar et disparition
