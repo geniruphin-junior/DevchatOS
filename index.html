@@ -91,12 +91,10 @@
         </div>
 
         <footer class="chat-input-area">
-          <input
-            type="text"
-            id="chatInput"
-            placeholder="Écrire un message..."
-            required
-          />
+          <input type="text" id="chatInput" placeholder="Écrire un message..." required />
+          <!-- Bouton photo ajouté -->
+          <button class="resource-btn" id="uploadBtn" title="Envoyer une photo" style="background:none; border:none; font-size:1.5rem; cursor:pointer;">📷</button>
+          <input type="file" id="fileInput" accept="image/*" style="display:none;">
           <button class="btn-send" id="sendBtn">➤</button>
         </footer>
       </main>
