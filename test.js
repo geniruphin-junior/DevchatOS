@@ -162,5 +162,3 @@ const sidebar = document.getElementById("sidbar");
 toggleBtn.addEventListener("click", () => {
   sidebar.classList.toggle("active");
 });
-const morning =
-  " c'est moi qui vous parle voici le lien vers le dépot du projet";
