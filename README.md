@@ -10,14 +10,14 @@ Malgré les difficultés de notre pays, nous avons créé ce projet pour apprend
 
 🌐 **Adresse du projet :** [https://devchat-ruphin.app.web](https://devchat-ruphin.web.app)
 
----
+-------------------------------------------------------
 
 ## 🖼️ Aperçu du projet
 
-![Interface de DevChat OS](dev.png)
+![Interface de DevChat OS](devchat.png)
 
-> Interface sécurisée et futuriste de DevChat OS 💬
-> Devchat fonctionnnant avec la technologie _firebase de google_ connecté au serveur de frankfurt
+>_"Interface sécurisée et futuriste de DevChat OS 💬"._
+>_"Devchat fonctionnnant avec la technologie _firebase de google_ connecté au serveur de frankfurt."_
 
 ---
 
