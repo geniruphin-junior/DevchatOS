@@ -127,11 +127,10 @@ function displayMessage(author, text, isSent, timestamp) {
   const wrapper = document.createElement("div");
   let timeTrue = "";
 
-  // Vérifie si un timestamp a bien été passé
   if (timestamp) {
-    // timestamp est un objet Firestore Timestamp → on le convertit en Date
     const date = timestamp.toDate();
     timeTrue = date.toLocaleString("fr-FR", {
+      weekday: "long",
       hour: "2-digit",
       minute: "2-digit",
       second: "2-digit",
@@ -141,10 +140,22 @@ function displayMessage(author, text, isSent, timestamp) {
     });
   }
 
+  // --- TRANSFORMATION DES LIENS ---
+  const linkifiedText = text.replace(
+    /https?:\/\/[^\s]+|www\.[^\s]+|[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\/[^\s]*)?)/g,
+    function (match) {
+      let url = match;
+      if (!/^https?:\/\//i.test(url)) {
+        url = "https://" + url;
+      }
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer">${match}</a>`;
+    },
+  );
+
   wrapper.className = `msg-wrapper ${isSent ? "sent-wrapper" : ""}`;
   wrapper.innerHTML = `
     <span class="msg-author">${author} • ${timeTrue}</span>
-    <div class="msg ${isSent ? "sent" : "received"}">${text}</div>
+    <div class="msg ${isSent ? "sent" : "received"}">${linkifiedText}</div>
   `;
   msgBox.appendChild(wrapper);
   msgBox.scrollTo({ top: msgBox.scrollHeight, behavior: "smooth" });
