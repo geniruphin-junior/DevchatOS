@@ -113,7 +113,12 @@ function loadMessages() {
     msgBox.innerHTML = "";
     snapshot.forEach((doc) => {
       const data = doc.data();
-      displayMessage(data.author, data.text, data.author === activeUser);
+      displayMessage(
+        data.author,
+        data.text,
+        data.author === activeUser,
+        data.timestamp,
+      );
     });
   });
 }
