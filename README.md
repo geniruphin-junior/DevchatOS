@@ -10,14 +10,14 @@ Malgré les difficultés de notre pays, nous avons créé ce projet pour apprend
 
 🌐 **Adresse du projet :** [https://devchat-ruphin.app.web](https://devchat-ruphin.web.app)
 
--------------------------------------------------------
+---
 
 ## 🖼️ Aperçu du projet
 
 ![Interface de DevChat OS](devchat.png)
 
->_"Interface sécurisée et futuriste de DevChat OS 💬"._
->_"Devchat fonctionnnant avec la technologie _firebase de google_ connecté au serveur de frankfurt."_
+> _"Interface sécurisée et futuriste de DevChat OS 💬"._
+> _"Devchat fonctionnnant avec la technologie \_firebase de google_ connecté au serveur de frankfurt."\_
 
 ---
 
@@ -34,5 +34,5 @@ Malgré les difficultés de notre pays, nous avons créé ce projet pour apprend
 
 1. Clonez le dépôt :
    ```bash
-   git clone https://github.com/geniruphin-junior/devchat.git
+   git clone https://github.com/geniruphin-junior/DevchatOS.git
    ```
