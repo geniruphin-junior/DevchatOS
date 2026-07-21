@@ -1,7 +1,7 @@
 # DevChat 💬
 
 > _“La technologie peut rapprocher les jeunes, même là où les moyens sont limités.”_  
-> — Ruphin, 13 ans, passionné de programmation en RDC 🇨🇩
+> — JVLTIC un groupe des jeunes lycéens , passionnés dedevellopement des outils locaux en RDC 🇨🇩
 
 ---
 
