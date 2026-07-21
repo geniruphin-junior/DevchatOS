@@ -5,7 +5,7 @@
 
 ---
 
-Un système de messagerie en temps réel développé par **Ruphin (13 ans, passionné de programmation en RDC)** et ses collaborateurs de l’équipe **JVLTIC** et de classe.  
+Un système de messagerie en temps réel développé par **Ruphin** et ses collaborateurs de l’équipe **JVLTIC** et de classe.  
 Malgré les difficultés de notre pays, nous avons créé ce projet pour apprendre, collaborer et montrer que la technologie peut rapprocher les jeunes.
 
 🌐 **Adresse du projet :** [https://devchat-ruphin.app.web](https://devchat-ruphin.web.app)
