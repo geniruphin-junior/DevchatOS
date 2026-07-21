@@ -1,6 +1,6 @@
 # DevChat 💬
 
-> _“La technologie peut rapprocher les jeunes, même là où les moyens sont limités.”_  
+> _“La technologie peut rapprocher les jeunes, même dans des regions en difficulté.”_  
 > — JVLTIC un groupe des jeunes lycéens , passionnés dedevellopement des outils locaux en RDC 🇨🇩
 
 ---
