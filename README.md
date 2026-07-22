@@ -2,6 +2,7 @@
 
 > _“La technologie peut rapprocher les jeunes, même là où les moyens sont limités.”_  
 > — Ruphin, 13 ans, passionné de programmation en RDC 🇨🇩
+> _Gloire, 14 ans, passionnée par le dev en RDC cd
 
 ---
 
